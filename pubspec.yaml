@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   easy_splash_screen: ^1.0.3
+  clay_containers: ^0.3.2
+  simple_ripple_animation: ^0.0.3
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:

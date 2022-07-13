@@ -15,7 +15,7 @@ class _splashState extends State<splash> {
     return EasySplashScreen(
       loaderColor: Colors.red,
 
-      logoSize: 200,
+      logoSize: 170,
       logo: Image.asset('assets/image/Asset 1.png'),
       title: Text("Invoice Genrator",style: GoogleFonts.poppins(fontWeight: FontWeight.w600,fontSize: 30),),
 
