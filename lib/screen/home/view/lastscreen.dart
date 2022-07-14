@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:invoice_genrator/screen/home/model/Modal_Classs.dart';
 import 'package:invoice_genrator/utils/constant/components/Sizebox.dart';
+import 'package:invoice_genrator/utils/constant/components/calculculate.dart';
 
 class last extends StatefulWidget {
   const last({Key? key}) : super(key: key);
@@ -129,7 +130,7 @@ class _lastState extends State<last> {
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
                                Text(
-                                 "\${i.itemName}",
+                                 "${c.cvalue["itemname"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -144,7 +145,7 @@ class _lastState extends State<last> {
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
                                Text(
-                                 "\${i.itemprice}",
+                                 "${c.cvalue["price"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -160,7 +161,7 @@ class _lastState extends State<last> {
                                ),
                                Text(
                                  ""
-                                     "\${i.itemqty}",
+                                     "${c.cvalue["qty"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -176,7 +177,7 @@ class _lastState extends State<last> {
                                ),
                                Text(
                                  ""
-                                     "\${i.itemdis}",
+                                     "${c.cvalue["discount"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -212,7 +213,7 @@ class _lastState extends State<last> {
                                ),
                                Text(
                                  ""
-                                     "\$90",
+                                     "${c.cvalue["price"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -228,7 +229,7 @@ class _lastState extends State<last> {
                                ),
                                Text(
                                  ""
-                                     "\$90",
+                                     "${c.cvalue["discount"]}",
                                  style: GoogleFonts.poppins(
                                      fontWeight: FontWeight.w500, fontSize: 20),
                                ),
@@ -237,17 +238,6 @@ class _lastState extends State<last> {
                            Row(
                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                              children: [
-                               Text(
-                                 "Tax()",
-                                 style: GoogleFonts.poppins(
-                                     fontWeight: FontWeight.w500, fontSize: 20),
-                               ),
-                               Text(
-                                 ""
-                                     "\$90",
-                                 style: GoogleFonts.poppins(
-                                     fontWeight: FontWeight.w500, fontSize: 20),
-                               ),
                              ],
                            ),
                            Row(
@@ -314,7 +304,7 @@ class _lastState extends State<last> {
                              ],
                            ),
                            Text(
-                             "\$98.88",
+                               "${c.cvalue["total"]}",
                              style: GoogleFonts.poppins(
                                  fontWeight: FontWeight.w500,
                                  color: Colors.white,
@@ -333,4 +323,5 @@ class _lastState extends State<last> {
        ),
     ),);
   }
+
 }

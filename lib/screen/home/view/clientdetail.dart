@@ -48,53 +48,58 @@ class _clientdetailState extends State<clientdetail> {
             ),
             centerTitle: true,
             backgroundColor: Colors.red),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                h(5),
-                txtformfield(
-                    "Name", "Enter The Name", Icons.person, txname, fieldkey),
-                txtformfield(
-                    "Email", "Enter The Mail", Icons.mail, txmail, fieldkey),
-                txtformfield(
-                  "Mobile No",
-                  "Enter The Mobile No",
-                  Icons.call,
-                  txnumber,
-                  fieldkey,
-                ),
-                txtformfield(
-                  "Shipping Address",
-                  "Address",
-                  Icons.airport_shuttle,
-                  txaddress,
-                  fieldkey,
-                ),
-                txtfield("Address Line 2", "Address", txaddress2),
-                txtfield("Address Line 3", "Address", txaddress3),
-                h(10),
-                ElevatedButton.icon(
-                    onPressed: () {
-                      // if(fieldkey.currentState!.validate()==true)
-                      //
-                      // {
-                      //
-                      // }
-                      name = txname.text;
-                      mail = txmail.text;
-                      number = txnumber.text;
-                       address= txaddress.text;
-                      client_info c = client_info({"name": "$name","email" : "$mail","number" : "$number","address" : "$address"});
+        body: SingleChildScrollView(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  h(5),
+                  txtformfield(
+                      "Name", "Enter The Name", Icons.person, txname, fieldkey),
+                  txtformfield(
+                      "Email", "Enter The Mail", Icons.mail, txmail, fieldkey),
+                  txtformfield(
+                    "Mobile No",
+                    "Enter The Mobile No",
+                    Icons.call,
+                    txnumber,
+                    fieldkey,
+                  ),
+                  txtformfield(
+                    "Shipping Address",
+                    "Address",
+                    Icons.airport_shuttle,
+                    txaddress,
+                    fieldkey,
+                  ),
+                  txtfield("Address Line 2", "Address", txaddress2),
+                  txtfield("Address Line 3", "Address", txaddress3),
+                  h(10),
+                  ElevatedButton.icon(
+                      onPressed: () {
+                        // if(fieldkey.currentState!.validate()==true)
+                        //
+                        // {
+                        //
+                        // }
+                        name = txname.text;
+                        mail = txmail.text;
+                        number = txnumber.text;
+                         address= txaddress.text;
+                         setState(() {
+                           client_info c = client_info({"name": "$name","email" : "$mail","number" : "$number","address" : "$address"});
 
-                      Navigator.pushNamed(context, "itempage", arguments: c);
-                    },
-                    icon: Icon(Icons.done),
-                    label: Text("Next")),
-                h(5)
-              ],
+                           Navigator.pushNamed(context, "itempage", arguments: c);
+                         });
+
+                      },
+                      icon: Icon(Icons.done),
+                      label: Text("Next")),
+                  h(5)
+                ],
+              ),
             ),
           ),
         ),
